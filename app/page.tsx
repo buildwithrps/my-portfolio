@@ -38,7 +38,7 @@ const PROJECTS = [
       "Visa & immigration services website — professional design, clean IA, SEO foundations.",
     stack: ["PHP", "MySQL", "HTML", "CSS"],
     links: { live: "#", code: "#" },
-    img: "https://images.unsplash.com/photo-1519751138087-5a3a3f44a3e0?w=900&q=80&auto=format&fit=crop",
+    img: "/nexus-global.png",
     badge: "Pro Site",
   },
   {
