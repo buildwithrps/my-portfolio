@@ -2,7 +2,7 @@
   "name": "rabindra-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://buildwithrps.github.io/my-portfolio",
+  "homepage": "https://rabindraprasadsah.com.np",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
