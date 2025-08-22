@@ -252,7 +252,7 @@ export default function Portfolio() {
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/40">
               <img src={avatarUrl} alt="Rabindra headshot" className="h-full w-full object-cover" />
             </div>
-            <p className="mt-3 text-center text-xs text-slate-400">Loosely inspired by Brittany Chiang &amp; Adham Dannaway portfolio styles.</p>
+            <p className="mt-3 text-center text-xs text-slate-400">Passionate about technology, driven to innovate, and always learning.</p>
           </div>
         </div>
       </section>
