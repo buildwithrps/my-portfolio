@@ -16,7 +16,7 @@ const TAGLINE = "I build creative, accessible, and impactful digital solutions."
 const EMAIL = "rabindra1816@gmail.com";
 const PHONE = "+977 9816773397";
 const LOCATION = "Siraha, Lahan, Nepal";
-const avatarUrl = "https://images.unsplash.com/photo-1541537103745-ea3429c65dc7?w=640&q=80&auto=format&fit=crop"; // ← replace with your photo URL
+const avatarUrl = "/my-image.png";
 const RESUME_URL = "#"; // optional: link to your PDF resume
 const GITHUB = "https://github.com/Rowbeendra";
 const LINKEDIN = "#"; // add your profile
