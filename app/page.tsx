@@ -401,8 +401,7 @@ export default function Portfolio() {
       <footer className="border-t border-white/5 py-10">
         <div className="mx-auto max-w-6xl px-6 text-sm text-slate-400">
           <p>
-            © {new Date().getFullYear()} {NAME}. Built with React & Tailwind. Deployed on GitHub Pages.
-            <span className="ml-2">Typeface: Inter. Palette: midnight w/ teal accents.</span>
+            © {new Date().getFullYear()} {NAME}. All rights reserved.
           </p>
         </div>
       </footer>
