@@ -130,13 +130,24 @@ const FORM_ACTION = ""; // e.g., "https://formspree.io/f/xxxxxx" or leave empty 
 // ------------------------
 // UI Helpers
 // ------------------------
-const Badge = ({ children }) => (
+interface BadgeProps {
+  children: React.ReactNode;
+}
+
+const Badge = ({ children }: BadgeProps) => (
   <span className="inline-flex items-center rounded-full border border-teal-500/30 bg-teal-500/10 px-2 py-0.5 text-xs font-medium text-teal-300">
     {children}
   </span>
 );
 
-const Section = ({ id, title, children, subtle }) => (
+interface SectionProps {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+  subtle?: boolean;
+}
+
+const Section = ({ id, title, children, subtle = false }: SectionProps) => (
   <section id={id} className={`${subtle ? "bg-slate-900/30" : "bg-transparent"} relative py-20` }>
     <div className="mx-auto w-full max-w-6xl px-6">
       <h2 className="mb-8 text-2xl font-semibold tracking-tight text-slate-100 sm:text-3xl">
@@ -147,7 +158,12 @@ const Section = ({ id, title, children, subtle }) => (
   </section>
 );
 
-const External = ({ href, children }) => (
+interface ExternalProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const External = ({ href, children }: ExternalProps) => (
   <a
     href={href}
     target="_blank"
@@ -160,18 +176,18 @@ const External = ({ href, children }) => (
 
 // Simple icon set (inline SVG) to avoid external deps
 const Icon = {
-  Mail: (props) => (
+  Mail: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" {...props}>
       <path d="M4 6h16v12H4z" />
       <path d="M22 6 12 13 2 6" />
     </svg>
   ),
-  Phone: (props) => (
+  Phone: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" {...props}>
       <path d="M22 16.92V21a1 1 0 0 1-1.09 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.09 1 1 0 0 1 4 2h4.09A1 1 0 0 1 9 2.72l1.23 2.73a1 1 0 0 1-.27 1.2L8.91 8.09a16 16 0 0 0 6 6l1.44-1.05a1 1 0 0 1 1.2-.27L21.28 14a1 1 0 0 1 .72.91Z" />
     </svg>
   ),
-  Location: (props) => (
+  Location: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" {...props}>
       <path d="M12 22s8-4.5 8-11a8 8 0 1 0-16 0c0 6.5 8 11 8 11Z" />
       <circle cx="12" cy="11" r="3" />
@@ -213,7 +229,7 @@ export default function Portfolio() {
           <div>
             <p className="mb-3 text-xs uppercase tracking-[0.2em] text-teal-300/80">Frontend • Databases • UI/UX</p>
             <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl">
-              Hi, I’m {NAME}
+              Hi, I&apos;m {NAME}
             </h1>
             <p className="mt-4 text-lg text-slate-300">{ROLE}</p>
             <p className="mt-3 max-w-prose text-slate-400">{TAGLINE}</p>
@@ -236,7 +252,7 @@ export default function Portfolio() {
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/40">
               <img src={avatarUrl} alt="Rabindra headshot" className="h-full w-full object-cover" />
             </div>
-            <p className="mt-3 text-center text-xs text-slate-400">Loosely inspired by Brittany Chiang & Adham Dannaway portfolio styles.</p>
+            <p className="mt-3 text-center text-xs text-slate-400">Loosely inspired by Brittany Chiang &amp; Adham Dannaway portfolio styles.</p>
           </div>
         </div>
       </section>
@@ -244,11 +260,11 @@ export default function Portfolio() {
       {/* ABOUT */}
       <Section id="about" title="About Me" subtle>
         <div className="grid gap-10 md:grid-cols-2">
-          <p className="text-slate-300">
-            I’m a BCA student from Nepal who loves turning ideas into fast, accessible web
-            experiences. I combine clean frontend engineering with thoughtful database and
-            information design. I’ve built projects across tourism, e‑commerce, and civic tech.
-          </p>
+                      <p className="text-slate-300">
+              I&apos;m a BCA student from Nepal who loves turning ideas into fast, accessible web
+              experiences. I combine clean frontend engineering with thoughtful database and
+              information design. I&apos;ve built projects across tourism, e‑commerce, and civic tech.
+            </p>
           <div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {SKILLS.map((s) => (
@@ -348,7 +364,7 @@ export default function Portfolio() {
       <Section id="contact" title="Contact Me">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-sm font-semibold text-white">Let’s build something</h3>
+            <h3 className="text-sm font-semibold text-white">Let&apos;s build something</h3>
             <p className="mt-2 text-sm text-slate-300">
               Prefer email? Reach me at <a className="underline decoration-teal-400/40 underline-offset-4 hover:text-white" href={`mailto:${EMAIL}`}>{EMAIL}</a>.
             </p>
@@ -385,7 +401,7 @@ export default function Portfolio() {
       <footer className="border-t border-white/5 py-10">
         <div className="mx-auto max-w-6xl px-6 text-sm text-slate-400">
           <p>
-            © {new Date().getFullYear()} {NAME}. Built with React & Tailwind. Deployed on Vercel.
+            © {new Date().getFullYear()} {NAME}. Built with React & Tailwind. Deployed on GitHub Pages.
             <span className="ml-2">Typeface: Inter. Palette: midnight w/ teal accents.</span>
           </p>
         </div>

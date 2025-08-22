@@ -2,11 +2,14 @@
   "name": "rabindra-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rowbeendra.github.io/rabindra-portfolio",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export": "next build",
+    "deploy": "npm run build && echo 'Build completed. Push the out/ folder to gh-pages branch or use GitHub Actions.'"
   },
   "dependencies": {
     "react": "19.1.0",
