@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/rabindra-portfolio' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/my-portfolio' : '',
 };
 
 export default nextConfig;

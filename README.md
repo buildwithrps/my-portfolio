@@ -21,8 +21,8 @@ A modern, responsive portfolio website built with Next.js and Tailwind CSS, desi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Rowbeendra/rabindra-portfolio.git
-cd rabindra-portfolio
+git clone https://github.com/buildwithrps/my-portfolio.git
+cd my-portfolio
 ```
 
 2. Install dependencies:
@@ -55,7 +55,7 @@ npm run dev
    - The GitHub Actions workflow will automatically build and deploy your site
 
 3. **Your site will be available at**:
-   `https://rowbeendra.github.io/rabindra-portfolio`
+   `https://buildwithrps.github.io/my-portfolio`
 
 ### Manual Deployment
 

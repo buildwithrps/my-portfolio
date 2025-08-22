@@ -29,7 +29,7 @@ git push origin main
   - Build your Next.js app
   - Export static files
   - Deploy to GitHub Pages
-- Your site will be available at: `https://rowbeendra.github.io/rabindra-portfolio`
+- Your site will be available at: `https://buildwithrps.github.io/my-portfolio`
 
 ## Method 2: Manual Deployment
 
@@ -94,4 +94,4 @@ If you encounter issues:
 
 ---
 
-**Your portfolio will be live at: https://rowbeendra.github.io/rabindra-portfolio**
+**Your portfolio will be live at: https://buildwithrps.github.io/my-portfolio**
